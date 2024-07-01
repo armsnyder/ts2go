@@ -10,10 +10,11 @@ import (
 
 func Example() {
 	source := strings.NewReader(`
-/**
- * My type
- */
-type Foo = { bar?: string /* My field */ }`)
+		/**
+		 * My type
+		 */
+		type Foo = { bar?: string /* My field */ }`,
+	)
 
 	output := &bytes.Buffer{}
 
@@ -38,10 +39,11 @@ type Foo = { bar?: string /* My field */ }`)
 
 func Example_mixins() {
 	source := strings.NewReader(`
-/**
- * My type
- */
-type Foo = { bar?: string /* My field */ }`)
+		/**
+		 * My type
+		 */
+		type Foo = { bar?: string /* My field */ }`,
+	)
 
 	output := &bytes.Buffer{}
 

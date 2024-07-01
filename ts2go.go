@@ -52,7 +52,7 @@ type Struct struct {
 	CustomData CustomData
 }
 
-// Field is the data model for the field.tmpl template.
+// Field is the data model for a field within a struct.
 type Field struct {
 	Name       string
 	Doc        []string
