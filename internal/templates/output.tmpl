@@ -1,0 +1,15 @@
+{{- if not .SkipHeader -}}
+{{- template "header.tmpl" . -}}
+{{- end -}}
+
+{{- range .ConstGroups -}}
+{{- template "const_group.tmpl" . -}}
+{{- end -}}
+
+{{- range .TypeAliases -}}
+{{- template "type_alias.tmpl" . -}}
+{{- end -}}
+
+{{- range .Structs -}}
+{{- template "struct.tmpl" . -}}
+{{- end -}}

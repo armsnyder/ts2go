@@ -1,0 +1,14 @@
+{{ range .Doc -}}
+// {{ . }}
+{{ end -}}
+type {{ .Name }} struct {
+	{{ range .Embeds -}}
+	{{ . }}
+	{{ end -}}
+	{{ range .Fields -}}
+	{{ range .Doc -}}
+	// {{ . }}
+	{{ end -}}
+	{{ .Name }} {{ if .IsPointer }}*{{ end }}{{ .Type }} `json:"{{ .JSONName }}{{ if .OmitEmpty }},omitempty{{ end }}"`
+	{{- end }}
+}
